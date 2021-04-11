@@ -171,12 +171,6 @@ public class ClientController {
 		return "redirect:/login?logout";
 	}
 
-	
 
-	@GetMapping("/guarantee")
-	public String guaranteePage(Model model) {
-
-		return "client/guarantee";
-	}
 
 }

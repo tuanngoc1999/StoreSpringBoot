@@ -34,7 +34,7 @@ $(document).ready(function(){
 				var content;
 				$.each(result, function(i, sanpham){
 					content = '';
-							content = '<div class="col-sm-3"><a href="sp?id='+sanpham.id+'">' +
+							content = '<div class="col_product"><a href="sp?id='+sanpham.id+'">' +
 									'<img style="width: 300px; height: 238px" src="/damh/img/'+sanpham.id+'.png">' +
 									'<h3 style="font-weight: bold;color:black;">'+sanpham.tenSanPham+'</h3></a>' +
 									'<h3>'+accounting.formatMoney(sanpham.donGia)+' VND</h3>'+

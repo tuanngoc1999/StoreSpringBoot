@@ -527,12 +527,11 @@ body{
 }
 /*-----content-grids----*/
 .content-grids{
-	width:80%;
+	width:990px;
 }
 /*----sidebar----*/
 .content-sidebar{
-	float:right;
-	width:19%;
+	width:15%;
 	font-family: 'Open Sans', sans-serif;
 }
 .content-sidebar h4{
@@ -574,6 +573,11 @@ body{
 	display: block;
 	float:left;
 	margin: 1% 0 1% 1.6%;
+}
+.col_product{
+	width: 300px;
+	height: 400px;
+	display: inline-block;
 }
 .col_1_of_4:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 	

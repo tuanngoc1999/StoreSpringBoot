@@ -66,56 +66,6 @@
 				</form>
 			</div>
 			<div class="clear"></div> 
-			</br>
-			<div class="header-top-nav ">
-				<c:if test="${pageContext.request.userPrincipal.name != null}">
-
-					<ul>
-						<li>Xin chào: ${loggedInUser.hoTen}</li>
-						<li><a href="<%=request.getContextPath()%>/account">Tài
-								khoản</a></li>
-						<li><a href="<%=request.getContextPath()%>/cart"><span>Giỏ
-									hàng&nbsp;&nbsp;: </span></a><span
-							class="glyphicon glyphicon-shopping-cart"></span></li>
-						<li><a href="<%=request.getContextPath()%>/logout"> Đăng
-								xuất</a></li>
-					</ul>
-				</c:if>
-
-				<c:if test="${pageContext.request.userPrincipal.name == null}">
-					<ul>
-						<li><a href="<%=request.getContextPath()%>/register">Đăng
-								kí</a></li>
-						<li><a href="<%=request.getContextPath()%>/login">Đăng
-								nhập</a></li>
-						<li><a href="<%=request.getContextPath()%>/cart"> <span>Giỏ hàng&nbsp;&nbsp;&nbsp;</span></a><span
-							class="glyphicon glyphicon-shopping-cart"></span></li>
-
-					</ul>
-				</c:if>
-			</div>
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div class="top-header">
-		<div class="wrap">
-			<div class="logo">
-				<a href="#"></a>
-					<img src="Frontend/img/logo1.png" title="logo" /></a>
-			</div>
-			<div class="top-nav">
-				<ul>
-					<li><a href="<%=request.getContextPath()%>/">Trang chủ</a></li>
-
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Cửa hàng <span class="caret"></span></a>
-						<ul class="dropdown-menu" style="background: rgb(46, 176, 236)" id="danhmuc2">
-						</ul></li>
-					<li><a href="<%=request.getContextPath()%>/contact">Liên hệ</a></li>
-				</ul>
-
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div> -->
+-->
 	
 	<script src="<c:url value='/js/client/header.js'/>" ></script>
