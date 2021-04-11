@@ -104,6 +104,7 @@ public class GioHangApi  {
 			{
 				c.setSo_luong(c.getSo_luong()+1);
 			}
+			g.setTong_tien(String.valueOf(sp.getDonGia()*c.getSo_luong()));
 			c = chiMucGioHangService.saveChiMucGiohang(c);
 		}
 		ro.setStatus("success");

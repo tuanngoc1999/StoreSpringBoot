@@ -64,12 +64,10 @@
 			<br><br>
 			<input type="hidden" id="tongGiaTri" name="tongGiaTri">
 		</div>
-		
 		<div class="col-md-6">
 			<br>
 			<p class="border-p" style="line-height:1.5;"><b>Giỏ hàng</b></p>
 			<br>
-			
 				<table class="table-cart-checkout mytable">
 					 <tr>
 						    <th>Ảnh</th>
@@ -107,7 +105,7 @@
 			 &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
 			<a href="<%=request.getContextPath()%>/cart" class="btn btn-primary">Quay lại giỏ hàng</a>
 			 &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-			 
+			 <!--<button class="btn btn-danger pull-center" onClick="sendOrder(${giohang.id})">Gửi đơn hàng</button>-->
 			<button class="btn btn-danger pull-center" type="submit" id="submit">Gửi đơn hàng</button>
 		
 			<br><br>

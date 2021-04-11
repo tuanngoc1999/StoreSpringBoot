@@ -68,7 +68,7 @@ public class CheckOutController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		Map<Long,String> quanity = new HashMap<Long,String>();
 		List<SanPham> listsp = new ArrayList<SanPham>();
-				
+		GioHang g = gioHangService.getGioHangByNguoiDung(currentUser);		
 		if(auth == null || auth.getPrincipal() == "anonymousUser")     //Lay tu cookie
 		{
 			Cookie cl[] = res.getCookies();		
@@ -85,7 +85,7 @@ public class CheckOutController {
 			listsp = sanPhamService.getAllSanPhamByList(idList);
 		}else     //Lay tu database
 		{
-			GioHang g = gioHangService.getGioHangByNguoiDung(currentUser);
+			
 			if(g != null)
 			{
 				List<ChiMucGioHang> listchimuc = chiMucGioHangService.getChiMucGioHangByGioHang(g);
@@ -103,7 +103,7 @@ public class CheckOutController {
 		model.addAttribute("cart",listsp);
 		model.addAttribute("quanity",quanity);
 		model.addAttribute("user", currentUser);
-		model.addAttribute("donhang", new DonHang());
+		model.addAttribute("giohang", g);
 		
 		return "client/checkout";
 	}
@@ -156,14 +156,14 @@ public class CheckOutController {
 				detailDH.setSoLuongDat(c.getSo_luong());
 				detailDH.setDonHang(d);
 				listDetailDH.add(detailDH);		
-				
+				ChiTietDonHang ct = chiTietDonHangService.save(detailDH);
 				listsp.add(c.getSanPham());
 				quanity.put(c.getSanPham().getId(), Integer.toString(c.getSo_luong()));
 			}
 			
 		}					
 			
-		chiTietDonHangService.save(listDetailDH);
+		//chiTietDonHangService.save(listDetailDH);
 		
 		cleanUpAfterCheckOut(req,response);
 		model.addAttribute("donhang",donhang);

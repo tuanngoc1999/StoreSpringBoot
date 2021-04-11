@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.laptopshop.entities.ChiTietDonHang;
+import com.laptopshop.entities.GioHang;
 import com.laptopshop.repository.ChiTietDonHangRepository;
 import com.laptopshop.service.ChiTietDonHangService;
 
@@ -19,5 +20,11 @@ public class ChiTietDonHangServiceImpl implements ChiTietDonHangService{
 	public List<ChiTietDonHang> save(List<ChiTietDonHang> list)
 	{	
 		return repo.saveAll(list);
+	}
+	
+	@Override
+	public ChiTietDonHang save(ChiTietDonHang g)
+	{
+		return repo.save(g);
 	}
 }
