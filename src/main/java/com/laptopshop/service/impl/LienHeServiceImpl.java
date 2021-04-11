@@ -8,7 +8,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import com.laptopshop.dto.LienHeDTO;
 import com.laptopshop.dto.SearchLienHeObject;
 import com.laptopshop.entities.LienHe;
 import com.laptopshop.entities.QLienHe;

@@ -129,9 +129,9 @@ public class SanPhamServiceImpl implements SanPhamService {
 
 	public Iterable<SanPham> getSanPhamByTenSanPhamWithoutPaginate(SearchSanPhamObject object) {
 		BooleanBuilder builder = new BooleanBuilder();
-		int resultPerPage = 12;
+//		int resultPerPage = 12;
 		String[] keywords = object.getKeyword();
-		String sort = object.getSort();
+//		String sort = object.getSort();
 		String price = object.getDonGia();
 		// Keyword
 		builder.and(QSanPham.sanPham.tenSanPham.like("%" + keywords[0] + "%"));

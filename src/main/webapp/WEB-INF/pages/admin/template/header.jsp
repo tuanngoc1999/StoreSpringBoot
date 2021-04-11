@@ -10,7 +10,6 @@
   		<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   		<link rel="stylesheet" href="<c:url value='/css/admin.css' />">
-  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -21,11 +20,11 @@
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>                        
       			</button>
-      			<a class="navbar-brand" href="/laptopshop/admin">ComputerShop</a>
+      			<a class="navbar-brand" href="/damh/admin">ComputerShop</a>
     		</div>
     		<div class="collapse navbar-collapse" id="myNavbar">
       			<ul class="nav navbar-nav">
-        			<li class="active"><a href="/laptopshop">Store</a></li>
+        			<li class="active"><a href="/damh">Store</a></li>
         			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Tác vụ<span class="caret"></span></a>
         			<ul class="dropdown-menu">
           				<li><a href="<c:url value='/admin/don-hang' />">

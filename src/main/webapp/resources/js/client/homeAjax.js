@@ -40,7 +40,7 @@ $(document).ready(function(){
 									'<h3>'+accounting.formatMoney(sanpham.donGia)+' VND</h3>'+
 									'<button onClick="addToCart('+sanpham.id+')" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart pull-center"></span> Mua</button>'+
 									'<h3></h3>'+
-									'</div></br></br>';
+									'</div>';
 									//content = section + content + endsection;
 								$('.row').append(content);
 				});

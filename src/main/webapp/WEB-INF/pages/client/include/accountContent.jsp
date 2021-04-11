@@ -7,7 +7,9 @@
 </head>
 <script src="<c:url value='/js/client/information.js'/>"></script>
 <script src="<c:url value='/js/client/password.js'/>"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$(".mytable .tongGiaTri ").each(function() {
@@ -38,10 +40,9 @@
 					<span style="font-weight: bold">Email: </span>${user.getEmail()}</h3>
 				<h3 style="line-height: 2;">
 					<span style="font-weight: bold"> Địa chỉ: </span>${user.getDiaChi()}</h3>
-				<br> <a class="btn btn-primary" data-toggle="modal"
-					data-target="#modalInformation">Cập nhật thông tin cá nhân</a>
-				&nbsp; &nbsp; &nbsp; <a class="btn btn-danger" data-toggle="modal"
-					data-target="#modalChangePassword">Đổi mật khẩu</a> <br> <br>
+				<br> <a class="btn btn-primary" data-toggle="modal" data-target="#modalInformation">Cập nhật thông tin cá nhân</a>
+				&nbsp; &nbsp; &nbsp;
+					 <a class="btn btn-danger" data-toggle="modal" data-target="#modalChangePassword">Đổi mật khẩu</a> <br> <br>
 				<br>
 				<h3>
 					<b>Lịch sử mua hàng:</b>
@@ -152,8 +153,7 @@
 
 	<!-- Modal đổi pass -->
 
-	<div class="modal fade" id="modalChangePassword" tabindex="-1"
-		role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modalChangePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">

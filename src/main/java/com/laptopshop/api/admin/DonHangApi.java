@@ -1,8 +1,6 @@
 package com.laptopshop.api.admin;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +17,6 @@ import com.laptopshop.entities.ChiTietDonHang;
 import com.laptopshop.entities.DonHang;
 import com.laptopshop.entities.SanPham;
 import com.laptopshop.service.DonHangService;
-import com.laptopshop.service.NguoiDungService;
 
 @RestController
 @RequestMapping("/api/don-hang")
@@ -28,8 +25,6 @@ public class DonHangApi {
 	@Autowired
 	private DonHangService donHangService;
 
-	@Autowired
-	private NguoiDungService nguoiDungService;
 
 	// lấy danh sách đơn hàng theo search object
 	@GetMapping("/all")
@@ -49,26 +44,6 @@ public class DonHangApi {
 		return donHangService.findById(id);
 	}
 
-	// phân công đơn hàng
-	@PostMapping("/assign")
-	public void phanCongDonHang(@RequestParam("shipper") String emailShipper,
-			@RequestParam("donHangId") long donHangId) {
-		DonHang dh = donHangService.findById(donHangId);
-		dh.setTrangThaiDonHang("Đang giao");
-		dh.setShipper(nguoiDungService.findByEmail(emailShipper));
-
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		try {
-
-			String dateStr = format.format(new Date());
-			Date date = format.parse(dateStr);
-			dh.setNgayGiaoHang(date);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-
-		donHangService.save(dh);
-	}
 
 	// xác nhận hoàn thành đơn hàng
 	@PostMapping("/update")

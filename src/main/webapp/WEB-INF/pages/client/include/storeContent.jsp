@@ -35,7 +35,7 @@
          				<c:if test = "${loop.index%4 == 0}">
          					<div class="section group">
          					<div class="grid_1_of_4 images_1_of_4 products-info" style=" width: 232px; height: 400px;"><a href="sp?id=${sanpham.id}">
-									<img style="width: 225px; height: 230px" src="/laptopshop/img/${sanpham.id}.png">
+									<img style="width: 225px; height: 230px" src="/damh/img/${sanpham.id}.png">
 									<h3 style="font-weight: bold; height: 43.2px">${sanpham.tenSanPham}</h3></a>
 									<h3 class="changeToVND">${sanpham.donGia}</h3>
 									<button onClick="addToCart(${sanpham.id})" class="btn btn-info"><span class= "glyphicon glyphicon-shopping-cart pull-center"></span> Mua</button>
@@ -46,7 +46,7 @@
          				<c:if test = "${loop.index%4 != 0}">
          					<c:if test = "${loop.index%4 == 3}">
          						<div class="grid_1_of_4 images_1_of_4 products-info" style=" width: 232px; height: 400px;"><a href="sp?id=${sanpham.id}">
-									<img style="width: 225px; height: 230px"src="/laptopshop/img/${sanpham.id}.png">
+									<img style="width: 225px; height: 230px"src="/damh/img/${sanpham.id}.png">
 									<h3 style="font-weight: bold;height: 44px">${sanpham.tenSanPham}</h3></a>
 									<h3 class="changeToVND">${sanpham.donGia}</h3>
 									<button onClick="addToCart(${sanpham.id})" class="btn btn-info"><span class= "glyphicon glyphicon-shopping-cart pull-center"></span> Mua</button>
@@ -57,7 +57,7 @@
 							
 							<c:if test = "${loop.index%4 != 3}">
 								<div class="grid_1_of_4 images_1_of_4 products-info" style=" width: 232px; height: 400px;"><a href="sp?id=${sanpham.id}">
-									<img style="width: 225px; height: 230px" src="/laptopshop/img/${sanpham.id}.png">
+									<img style="width: 225px; height: 230px" src="/damh/img/${sanpham.id}.png">
 									<h3 style="font-weight: bold;height: 44px">${sanpham.tenSanPham}</h3></a>
 									<h3 class="changeToVND">${sanpham.donGia}</h3>
 									<button onClick="addToCart(${sanpham.id})" class="btn btn-info"><span class= "glyphicon glyphicon-shopping-cart pull-center"></span> Mua</button>
@@ -70,7 +70,7 @@
      					<c:if test = "${loop.index%4 == 0}">
      						<div class="section group">
          					<div class="grid_1_of_4 images_1_of_4 products-info" style=" width: 232px; height: 400px;"><a href="sp?id=${sanpham.id}">
-									<img style="width: 225px; height: 230px" src="/laptopshop/img/${sanpham.id}.png">
+									<img style="width: 225px; height: 230px" src="/damh/img/${sanpham.id}.png">
 									<h3 style="font-weight: bold;height: 44px">${sanpham.tenSanPham}</h3></a>
 									<h3 class="changeToVND">${sanpham.donGia}</h3>
 									<button onClick="addToCart(${sanpham.id})" class="btn btn-info"><span class= "glyphicon glyphicon-shopping-cart pull-center"></span> Mua</button>
@@ -80,7 +80,7 @@
      					</c:if>
      					<c:if test = "${loop.index%4 != 0}">
      						<div class="grid_1_of_4 images_1_of_4 products-info" style=" width: 232px; height: 400px;"><a href="sp?id=${sanpham.id}">
-									<img style="width: 225px; height: 230px" src="/laptopshop/img/${sanpham.id}.png">
+									<img style="width: 225px; height: 230px" src="/damh/img/${sanpham.id}.png">
 									<h3 style="font-weight: bold;height: 44px">${sanpham.tenSanPham}</h3></a>
 									<h3 class="changeToVND">${sanpham.donGia}</h3>
 									<button onClick="addToCart(${sanpham.id})" class="btn btn-info"><span class= "glyphicon glyphicon-shopping-cart pull-center"> </span>Mua</button>
@@ -93,13 +93,13 @@
 		    	<c:if test = "${list.size() != 0}">
 		    		<div class="paging">
             		<c:if test = "${currentPage != 1}">
-                		<a href="/laptopshop/store?page=${currentPage-1}&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">Back</a>
+                		<a href="/damh/store?page=${currentPage-1}&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">Back</a>
                 	</c:if>
                 	<c:if test = "${currentPage == 1}">	
         				<a class="current">1</a>
         			</c:if>
         			<c:if test = "${currentPage != 1}">	
-        				<a href="/laptopshop/store?page=1&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">1</a>
+        				<a href="/damh/store?page=1&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">1</a>
         			</c:if>
         			
         			<c:forEach var="pag" items="${pageList}" varStatus="loop">
@@ -107,12 +107,12 @@
         					<a class="current">${pag}</a>
         				</c:if>
         				<c:if test = "${currentPage != pag}">	
-        					<a href="/laptopshop/store?page=${pag}&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">${pag}</a>
+        					<a href="/damh/store?page=${pag}&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">${pag}</a>
         				</c:if>
       				</c:forEach>
 
             		<c:if test = "${currentPage != totalPage}">
-                		<a href="/laptopshop/store?page=${currentPage+1}&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">Next</a>	
+                		<a href="/damh/store?page=${currentPage+1}&range=${range}&brand=${brand}&manufactor=${manufactor}&os=${os}&ram=${ram}&pin=${pin}">Next</a>	
                 	</c:if>
 				</div>
 		    	</c:if>

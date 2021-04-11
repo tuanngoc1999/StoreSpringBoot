@@ -47,7 +47,7 @@ html
 <tr class="cart_line" id="item${sanpham.id}">
 		<div>
 		<td>${loop.index+1}</td>
-		<td><img src="/laptopshop/img/${sanpham.id}.png" style="width: 150px" class="cart-img"></td>
+		<td><img src="/damh/img/${sanpham.id}.png" style="width: 150px" class="cart-img"></td>
 		<td style="text-align: center; mergin-top: -52px;">
 			<p class="cart_ten"><a href="<c:url value="/sp?id=${sanpham.id}" />">${sanpham.tenSanPham}</a></p>
 			<p class="cart_masanpham">Mã sản phẩm : <span>${sanpham.id}</span></p>
@@ -59,7 +59,7 @@ html
 		</td>
 		<td><b><span class="total" id="item${sanpham.id}_total" name="total_price">${sanpham.donGia*quanity[sanpham.id]}</span> VND</b></td>
 		<td class="cart-img">
-			<a class="btn btn-danger" onClick="deleteFromCart(${sanpham.id})"><span class="glyphicon glyphicon-trash"></span></a>
+			<a class="btn btn-danger" onClick="deleteFromCart(${sanpham.id})">X</a>
 		</td>
 		</div>
 	

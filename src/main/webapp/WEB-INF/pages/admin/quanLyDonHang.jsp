@@ -15,14 +15,12 @@
 		<h3 class="page-header form-inline">Quản lý Đơn hàng</h3>
 
 		<form class="form-inline" id="searchForm" name="searchObject">
-
 			<select class="form-control" id="trangThai">
 				<option value="Đang chờ giao">Đang chờ giao</option>
 				<option value="Đang giao">Đang giao</option>
 				<option value="Chờ duyệt">Chờ duyệt</option>
 				<option value="Hoàn thành">Hoàn thành</option>
 				<option value="Đã bị hủy">Đã bị hủy</option>
-				<!-- <option value="">Tất cả</option> -->
 			</select>
 
 			<div class="form-group">

@@ -4,66 +4,63 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="Frontend/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='//fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="Frontend/css/responsiveslides.css">
 <script src="Frontend/js/jquery.min.js"></script>
 <script src="Frontend/js/responsiveslides.min.js"></script>
 <script src="js/client/accounting.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-<script>
-		    // You can also use "$(window).load(function() {"
-			    $(function () {
-			      $("#slider1").responsiveSlides({
-			        maxwidth: 1600,
-			        speed: 600
-			      });
-			});
-		   
-		  </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
-        <a class="navbar-brand" href="/laptopshop" style="padding-left: 70px; size:30px">ComputerShop</a>
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav">
+	<nav class="navbar navbar-inverse navbar-fixed-top" >
+		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>                        
+      			</button>
+        <a class="navbar-brand" href="/damh" style="padding-left: 70px;">ComputerShop</a></div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="/laptopshop">Trang chủ</a>
+                    <a class="nav-link page-scroll" href="/damh">Trang chủ</a>
                 </li>
 				<li class="nav-item">
-                    <a class="nav-link page-scroll" href="/laptopshop/store">Cửa hàng</a>
+                    <a class="nav-link page-scroll" href="/damh/store">Cửa hàng</a>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="/laptopshop/contact">Liên hệ</a>
+                    <a class="nav-link page-scroll" href="/damh/contact">Liên hệ</a>
                 </li>
             </ul>
-			<div class="left-nav">
+			<div class="nav navbar-nav navbar-right" style="padding-right:40px">
+
 				<c:if test="${pageContext.request.userPrincipal.name != null}">
-					<ul>
+					<ul class="nav navbar-nav navbar-right">
 						<li><a href="<%=request.getContextPath()%>/account">Xin chào: ${loggedInUser.hoTen}</a></li>
-						<li><a href="<%=request.getContextPath()%>/logout"> Đăng xuất</a></li>
-						<li><a href="<%=request.getContextPath()%>/cart"><span>Giỏ hàng&nbsp;&nbsp;  </span></a><span class="glyphicon glyphicon-shopping-cart"></span></li>
+						<li><a href="<%=request.getContextPath()%>/cart">Giỏ hàng<span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+						<li><a href="<%=request.getContextPath()%>/logout"><span class="glyphicon glyphicon-log-out"></span>Đăng xuất</a></li>
 					</ul>
 				</c:if>
 				<c:if test="${pageContext.request.userPrincipal.name == null}">
-					<ul >
+					<ul class="nav navbar-nav navbar-right" >
 						<li><a href="<%=request.getContextPath()%>/login">Đăng nhập</a></li>
-						<li><a href="<%=request.getContextPath()%>/cart"> <span>Giỏ hàng&nbsp;&nbsp;&nbsp;</span></a><span
-							class="glyphicon glyphicon-shopping-cart"></span></li>
+						<li><a href="<%=request.getContextPath()%>/cart">Giỏ hàng<span class="glyphicon glyphicon-shopping-cart"></span></a></li>
 					</ul>
 				</c:if>
 			</div>
-
+			</div>
         </div>
     </nav> 
-
 	<!-- <div class="wrap">
 		<div class="header">
 			 <div class="search-bar">
-				<form action="/laptopshop/search">
+				<form action="/damh/search">
 					<input type="text" name="name"><input type="submit"
 						value="Search" />
 				</form>

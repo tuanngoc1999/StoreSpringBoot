@@ -26,7 +26,6 @@ import com.laptopshop.entities.VaiTro;
 import com.laptopshop.service.DanhMucService;
 import com.laptopshop.service.DonHangService;
 import com.laptopshop.service.HangSanXuatService;
-import com.laptopshop.service.LienHeService;
 import com.laptopshop.service.NguoiDungService;
 import com.laptopshop.service.VaiTroService;
 
@@ -47,9 +46,6 @@ public class AdminController {
 	@Autowired
 	private VaiTroService vaiTroService;
 	
-	@Autowired
-	private LienHeService lienHeService;
-
 	@Autowired
 	private DonHangService donHangService;
 

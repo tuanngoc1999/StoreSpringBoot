@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	
-	// load first when coming page
 	ajaxGet(1);	
 	
 	function ajaxGet(page){		
@@ -9,7 +7,7 @@ $(document).ready(function() {
 			type: "GET",		
 			data: data,
 			contentType : "application/json",
-			url: "http://localhost:8080/laptopshop/api/don-hang/all" + '?page=' + page,
+			url: "http://localhost:8080/damh/api/don-hang/all" + '?page=' + page,
 			success: function(result){
 				$.each(result.content, function(i, donHang){
 					// tính giá trị đơn hàng\
@@ -73,7 +71,7 @@ $(document).ready(function() {
 	
 	
     // event khi click vào button Chi tiết đơn
-	$(document).on('click', '.btnPhanCong', function (event){
+	/*$(document).on('click', '.btnPhanCong', function (event){
 		event.preventDefault();
 		var donHangId = $(this).parent().prev().children().val();	
 		$("#donHangId").val(donHangId);
@@ -95,7 +93,7 @@ $(document).ready(function() {
      		async:false,
  			type : "POST",
  			contentType : "application/json",
- 			url : "http://localhost:8080/laptopshop/api/don-hang/assign?shipper="+email+"&donHangId="+donHangId,
+ 			url : "http://localhost:8080/damh/api/don-hang/assign?shipper="+email+"&donHangId="+donHangId,
  			enctype: 'multipart/form-data',
  	        
  			success : function(response) {
@@ -108,7 +106,7 @@ $(document).ready(function() {
  				console.log("ERROR: ", e);
  			}
  		}); 
-    }	
+    }	*/
 		
 	$(document).on('click', '#btnDuyetDonHang', function (event) {
 		event.preventDefault();
@@ -138,7 +136,7 @@ $(document).ready(function() {
 		
 		var donHangId = $(this).parent().prev().children().val();	
 //		console.log(donHangId);
-		var href = "http://localhost:8080/laptopshop/api/don-hang/"+donHangId;
+		var href = "http://localhost:8080/damh/api/don-hang/"+donHangId;
 		$.get(href, function(donHang) {
 			$('#maDonHang').text("Mã đơn hàng: "+ donHang.id);
 			$('#hoTenNguoiNhan').text("Người nhận: "+ donHang.hoTenNguoiNhan);
@@ -206,7 +204,7 @@ $(document).ready(function() {
 		if(donHangId != ''){
     	  $('.donHangTable tbody tr').remove();
     	  $('.pagination li').remove();
-		  var href = "http://localhost:8080/laptopshop/api/don-hang/"+donHangId;
+		  var href = "http://localhost:8080/damh/api/don-hang/"+donHangId;
 		  $.get(href, function(donHang) {
 				// tính giá trị đơn hàng
 			  var sum = 0;
@@ -256,7 +254,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var donHangId = $(this).parent().prev().children().val();	
 		$("#idDonHangXacNhan").val(donHangId);
-		var href = "http://localhost:8080/laptopshop/api/don-hang/"+donHangId;
+		var href = "http://localhost:8080/damh/api/don-hang/"+donHangId;
 		$.get(href, function(donHang) {
 			// thêm bảng:
 			var stt = 1;
@@ -292,7 +290,7 @@ $(document).ready(function() {
      		async:false,
  			type : "POST",
  			contentType : "application/json",
- 			url : "http://localhost:8080/laptopshop/api/don-hang/update?donHangId="+$("#idDonHangXacNhan").val()+"&ghiChu="+$("#ghiChuAdmin").val(),
+ 			url : "http://localhost:8080/damh/api/don-hang/update?donHangId="+$("#idDonHangXacNhan").val()+"&ghiChu="+$("#ghiChuAdmin").val(),
  			enctype: 'multipart/form-data',
 			success : function(response) {
 				$("#capNhatTrangThaiModal").modal('hide');
@@ -321,7 +319,7 @@ $(document).ready(function() {
      		async:false,
  			type : "POST",
  			contentType : "application/json",
- 			url : "http://localhost:8080/laptopshop/api/don-hang/cancel?donHangId="+donHangId,
+ 			url : "http://localhost:8080/damh/api/don-hang/cancel?donHangId="+donHangId,
 			success : function(response) {
 				alert("Hủy đơn hàng thành công");
 			},
